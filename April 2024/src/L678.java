@@ -27,7 +27,21 @@ public static void main(String[] args) {
                     return false;
                 }
             }
-        }    
+        }
+
+
+        while (left.size()!=0){
+            if (star.size() == 0) {
+                return false;
+            }
+            if (star.peek() > left.peek()) {
+                star.pop();
+                left.pop();
+            }
+            else {
+                return false;
+            }
+        }
 
         return true;
     }
